@@ -1,0 +1,156 @@
+﻿,Finarkein,Ignosis,Perfios,Setu,Moneyone
+Consent related,,,,,
+Single consent,Y,Y,Y,Y,Y
+Multi consent,Y,Y,N,N,Y
+Multi FI consent,Y,N,N,N,Y
+Multi party consent,Y,Y,N,N,Y
+Dynamic consent,Y,N,N,N,Y
+Multi AA integration,Y,Y,N,Y,Y
+Multi AA orchestration,Y,?,N,N,N
+Targeted discovery,Y,Y,Y,Y,Y
+Auto discovery,Y,Y,N,Y,Y
+Filtered discovery,Y,N,N,N,N
+Discovery retry,Y,N,N,N,N
+Alternate Mobile based discovery,Y,N,WIP,N,Y
+AA routing strategies,"Health based, Round Robin, Preference based","Preference based, Health based",1 AA,1 AA,1 AA
+Data sources for AA routing,"Internal, Saans, AA APIs",Saans,NA,NA,NA
+Embedded consent revoke,Y,N,N,N,WIP
+Consent expiry alert,Y,N,N,N,N
+Realtime user activity events,Y,Y,Y,Y,Y
+Multi lingual support,Y,N,N,N,WIP
+Redirection with Query param,Y,?,N,N,Y
+,,,,,
+UI related,,,,,
+AA stock UI,Y,Y,Y,Y,Y
+Branded UI,Y,Y,Y,Y,Y
+Custom UI,Y,Y,N,N,Y
+Dynamic UI,Y,N,N,N,N
+Common experience across AA,Y,For preferred AA,NA,NA,NA
+Responsive UI,Y,?,N,N,N
+Supported tech stack,"Web, Android, iOS, Flutter, React, Hybrid","Web, Flutter, React",Web,"Web, Flutter, Android","Web, Android, Flutter, React"
+,,,,,
+AA integrations,,,,,
+No of integrated AA,12,6,1,2,5
+Deep integrated AA,8,2,1,1,1
+Preferred AA,"Finvu, NADL, Anumati, Saafe, Onemoney","Onemoney, Saafe",Anumati,Onemoney,Onemoney
+Max concentration with 1 AA,<30%,>85%,100%,>90%,>90%
+,,,,,
+Data fetch related,,,,,
+Multi FI data fetch,Y,Y,N,N,N
+FIP wise data fetch,Y,N,N,N,N
+Split data fetch,Y,Y,N,N,N
+Fetch filters,Y,Y,Y,Y,Y
+Auto Fetch support,Y,N,N,Y,N
+Fetch optimization logics,Y,N,N,N,N
+Scheduled fetch,Y,Y,Y,N,N
+Bulk fetch,Y,N,Y,N,Y
+Account wise fetch status,Y,Y,N,N,N
+Retry scheduler,Y,N,N,N,N
+Data rules support,Y,N,N,N,N
+Data quality checker,Y,N,N,Y,N
+Supported output formats,"JSON, Excel, PDF, XML","JSON, PDF","JSON, XML, Excel",JSON,"JSON, Excel"
+FI types already live in solution,"Deposit, TD, Life Insurance, General Insurance, Insurance Policies, NPS, MF, Equities, GST, ETF","Deposit, MF, Equities, NPS, FD",Deposit,"Deposit, Equities, MF","Deposit, Equities, MF, GST"
+,,,,,
+FIU integrations,,,,,
+API integration,Y,Y,Y,Y,Y
+SFTP integration,Y,N,Y,N,N
+SDK integration,Y,Y,N,Y,Y
+Callback based status,Y,Y,N,Y,N
+Callback based data push,Y,Y,N,Y,N
+Fallback APIs,Y,Y,Y,Y,Y
+FIP Health API,Y,N,N,N,N
+User funnel events via webhook,Y,N,N,Y,N
+SMS/Email/WA service integration,Y,N,N,N,N
+Alternate method integration,Y,?,Y,N,N
+,,,,,
+Documentation,,,,,
+API documentation,Y,Y,Y,Y,Y
+Solution documentation,Y,?,?,Y,N
+Testing documentation,Y,N,Y,Y,N
+Agent training documentation,Y,N,N,N,N
+Customer Support FAQ sheet,Y,N,N,N,N
+,,,,,
+Sandbox,,,,,
+All FI data,Y,N,N,N,N
+Multiple FIP,Y,Y,N,Y,Y
+Custom data provision,Y,Y,N,N,N
+Scenario testing,Y,N,N,Y,N
+Multi AA testing,Y,Y,N,Y,N
+,,,,,
+Enterprise solutions,,,,,
+Flows,Y,N,N,N,N
+Smart collect with LMS CRM integration,Y,N,N,N,N
+Portfolio Monitoring with LMS integration,Y,N,N,N,N
+White label PFM app,Y,Y,Y,N,N
+Lead generation nudges,Y,Y,N,N,N
+Usage Recon System,Y,N,N,N,N
+,,,,,
+Dashboards,,,,,
+AA control,Y,N,N,N,N
+FIP control,Y,N,N,N,N
+Product performance,Y,Y,N,Y,Y
+Flow wise performance,Y,NA,NA,NA,NA
+AA wise performance,Y,Y,N,N,Y
+FIP wise performance,Y,Y,N,Y,Y
+Failure logs view,Y,Y,N,N,Y
+Request level details,Y,Y,Y,Y,Y
+Consent journey funnel overall,Y,Y,Y,Y,Y
+Consent journey funnel per request,Y,N,N,N,N
+Consent template management,Y,N,N,N,Y
+User management with RBAC,WIP,N,Y,Y,N
+DIY portal for backoffice,Y,N,N,N,N
+Flow manager,WIP,NA,NA,NA,NA
+,,,,,
+Security,,,,,
+ISO27001,Y,Y,Y,Y,Y
+ISO27017,Y,N,N,N,N
+SOC2 Type2,Y,N,Y,N,N
+VAPT by Cert In auditor,Y,?,Y,?,Y
+Source code review by Cert In auditor,Y,?,Y,?,Y
+HMAC support,Y,N,Y,N,N
+AES256 bit additional payload encryption,Y,Y,Y,Y,Y
+TLS1.2+ transit encryption,Y,Y,Y,Y,Y
+OAuth2 (or similar) authorization,Y,Y,Y,Y,Y
+,,,,,
+Support,,,,,
+Available channels,"Email, JSM, Chat, Call","Email, JSM, Chat, Call","Email, JSM, Chat, Call","Email, JSM, Chat, Call","Email, JSM, Chat, Call"
+Alerts,Y,N,N,N,N
+AA Billing management,Y,Y,Y - only preferred AA,Y,Y - only preferred AA
+Grievance management with AA,Y,Y,Y - only preferred AA,Y,Y - only preferred AA
+Grievance management with FIP,Y,Y,N,N,Y
+,,,,,
+Infrastructure experience,,,,,
+AWS,Y,Y,Y,Y,Y
+Azure,Y,N,Y,N,N
+GCP,Y,Y,Y,Y,Y
+Oracle Hybrid,Y,N,Y,N,N
+Salesforce,Y,N,Y,N,Y
+IBM,Y,Y,Y,Y,N
+,,,,,
+Analytics,,,,,
+Bank statement for PL/CD UW,Y,Y,Y,N,N
+Bank statement for HL UW,Y,N,Y,N,N
+Bank statement for CC UW,Y,N,Y,N,N
+Bank statement for monitoring,Y,N,N,N,N
+Bank statement for collections,Y,Y,N,N,N
+Investment analysis,Y,Y,N,Y,N
+Income identification for Salaried,Y,Y,Y,Y,N
+Income identification for Non Salaried,Y,Y,Y,N,N
+Portfolio Analysis,Y,Y,N,Y,N
+Transaction categorization,Y,Y,Y,Y,N
+Transaction merchant identification,Y,Y,N,Y,N
+Spend Analysis,Y,Y,N,Y,N
+Cashflow analysis,Y,Y,Y,Y,N
+Bill identification,Y,Y,N,N,N
+Category modification,Y,Y,N,N,N
+Hidden charges identificaiton,Y,Y,N,Y,N
+Budget Management,Y,N,N,N,N
+Goal Management,Y,N,N,N,N
+Taxation Analysis,WIP,N,N,N,N
+EMI identification,Y,Y,Y,Y,N
+Penalty/Default identification,Y,Y,Y,Y,N
+Related Party transaction identification,Y,N,Y,N,N
+Bank-Investment cross analysis,WIP,?,N,N,N
+Bank-GST cross analysis,WIP,?,Y,N,N
+GST statement analysis for UW,Y,Y,Y,N,N
+LLM/Gen AI,N,Y,N,Y,N
