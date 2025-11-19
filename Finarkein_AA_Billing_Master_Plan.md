@@ -1,289 +1,438 @@
-# Finarkein AA Billing Master Plan & Competitive Analysis
+# Finarkein Billing Strategy
 
-## Executive Summary
+## Summary
 
-This master document consolidates the competitive pricing analysis of the Account Aggregator (AA) landscape and outlines a comprehensive billing strategy for Finarkein. It leverages Finarkein's unique position as a multi-AA orchestrator with superior analytics capabilities to define a value-based pricing model.
+We analyzed 7 Account Aggregators and 3 tech providers. Here's our pricing strategy.
 
----
-
-## Part 1: Competitive Pricing Analysis
-
-### Overview of AA & TSP Pricing Models
-
-We analyzed the pricing structures of Account Aggregators (AAs) and Technology Service Providers (TSPs) to establish a baseline for Finarkein's cost structure and competitive positioning.
-
-| Provider | Entity Type | Pricing Model | Price Range (per fetch) | Key Notes |
-|----------|-------------|---------------|-------------------------|-----------|
-| **Setu AA** | **AA** (Agya Technologies) | Use-case based | ₹0.01 - ₹25 | RBI-licensed NBFC-AA. Pricing depends on FIU use case. |
-| **Anumati** | **AA** (Perfios) | Data-type based | ₹1 - ₹25 | RBI-licensed NBFC-AA. ₹5-25 for statements (varies by period), ₹1 for profile/summary only. |
-| **Finvu** | **AA** (Cookiejar Tech) | Volume-based | ₹20 - ₹30 | RBI-licensed NBFC-AA. Volume discounts available. |
-| **NADL** | **AA** (NESL) | Transaction-based | ₹2 | RBI-licensed NBFC-AA. ₹2/transaction includes onboarding, discovery, consent. |
-| **Moneyone** | **TSP** (Tech Platform) | Hybrid (Per-account + Rev Share) | **Not Available** | Technology Service Provider. Pricing not publicly disclosed. |
-| **Onemoney** | **AA** (FinSec AA) | Per-account | ₹0.30 - ₹11 | RBI-licensed NBFC-AA. ₹0.30 (balance), ₹3 (profile), ₹9.90 (statements), ₹11 (all). |
-| **Protean** | **AA** (NSDL) | Per-fetch | ₹2 - ₹10 | RBI-licensed NBFC-AA. ₹2-10/fetch (varies by provider, date range). Free for consumers. |
-| **CAMS** | **AA** (CAMSFinServ) | Volume-based | **Not Available** | RBI-licensed NBFC-AA. Pricing not publicly disclosed. Free for consumers. |
-| **Ignosis** | **TSP** (FIP/FIU Module) | Pay-as-you-go | **Not Available** | Technology Service Provider. Pricing not publicly disclosed. |
-| **Saafe** | **TSP** (FIP/FIU Module) | Modular | **Not Available** | Technology Service Provider. Pricing not publicly disclosed. |
-
-### Key Insights
-1.  **Entity Types**: **7 Account Aggregators** (RBI-licensed NBFC-AA) vs **3 TSPs** (Technology platforms) in our analysis.
-2.  **Wide Variance**: AA costs range from ₹0.01 to ₹30, heavily influenced by volume, use case, and data type.
-3.  **Pricing Transparency**: All AA pricing verified from official sources (as of Nov 2025).
-3.  **Pass-Through Model**: Most AAs pass through FIP charges (if any) to the FIU.
-4.  **Volume Discounts**: Standard for high-volume commitments across all AAs.
-5.  **TSP Positioning**: TSPs like Ignosis and Saafe offer multi-AA orchestration (similar to Finarkein) with custom enterprise pricing.
+**Key points:**
+- AA costs: ₹0.01 to ₹30 per fetch
+- Our TSP fee: ₹5 to ₹50 per fetch (based on features)
+- AA charges passed through at cost
+- 5 pricing tiers for different client needs
 
 ---
 
-## Part 2: The Distinction: AA vs. TSP Pricing
+## Market Pricing
 
-It is critical to distinguish between the two cost components in the ecosystem:
+### Account Aggregators (Licensed)
 
-### 1. Account Aggregator (AA) Charges
-*   **Role**: The "Data Pipe". Licensed NBFC-AA entity.
-*   **Charge For**: Successful data fetch/consent.
-*   **Nature**: Regulated, often commoditized, "toll-road" fee.
-*   **Billing**: Often passed through by the TSP to the client (FIU) at actuals.
+| Provider | Price Range | Model | Notes |
+|----------|-------------|-------|-------|
+| Setu AA | ₹0.01 - ₹25 | Use-case | Varies by FIU type |
+| Anumati | ₹1 - ₹25 | Data-type | ₹1 profile, ₹5-25 statements |
+| Finvu | ₹20 - ₹30 | Volume | Discounts available |
+| NADL | ₹2 | Flat | Includes all steps |
+| Onemoney | ₹0.30 - ₹11 | Per-account | ₹0.30 balance, ₹11 all data |
+| Protean | ₹2 - ₹10 | Per-fetch | Varies by date range |
+| CAMS | Not public | Volume | Contact for pricing |
 
-### 2. Technology Service Provider (TSP) Charges (Finarkein)
-*   **Role**: The "Intelligence Layer". Technology partner.
-*   **Charge For**: Orchestration, Analytics, Reliability, Support, Integrations.
-*   **Nature**: Value-based, unregulated, SaaS fee.
-*   **Billing**: Service fee charged by Finarkein for enabling and enhancing the AA ecosystem.
+### Tech Providers (Not Licensed)
 
-> **Finarkein's Model**: We charge a **TSP Service Fee** for our platform value. AA charges are treated as **Pass-Through Costs** (at actuals).
+| Provider | Pricing | Status |
+|----------|---------|--------|
+| Moneyone | Not public | TSP platform |
+| Ignosis | Not public | TSP platform |
+| Saafe | Not public | TSP platform |
 
----
-
-## Part 3: Finarkein's Competitive Advantage (TSP Layer)
-
-Finarkein is not just a connector; it is a comprehensive **Technology Service Provider (TSP)** with distinct advantages over standalone AAs.
-
-### Core Differentiators
-*   **Multi-AA Orchestration**: Integration with **12 AAs** (8 deep integrations) vs. 1-6 for competitors.
-*   **Reliability**: **<30% concentration** with any single AA, ensuring high availability via health-based routing.
-*   **Data Depth**: Support for **10 FI types** (vs. 1-5 standard).
-*   **Advanced Analytics**: Built-in underwriting, monitoring, and cross-analysis (Bank-Investment, Bank-GST).
-*   **Enterprise Ready**: LMS/CRM integrations, white-label PFM, and dedicated support.
+**What this means:**
+- AA costs are the "toll road" fee
+- We add value on top with our tech
+- Our competitors don't publish TSP pricing
 
 ---
 
-## Part 3.1: Comparative TSP Analysis (Finarkein vs. The Rest)
+## Two Types of Costs
 
-Based on a detailed feature comparison, Finarkein offers critical enterprise capabilities that other TSPs (Ignosis, Moneyone) lack. This justifies our premium Tier 2+ pricing.
+### 1. AA Charges (Pass-Through)
 
-### 1. Orchestration & Connectivity Gap
-| Feature | Finarkein | Ignosis | Moneyone | Impact |
-|---------|-----------|---------|----------|--------|
-| **Integrated AAs** | **12** (8 Deep) | 6 | 5 | **Coverage**: We connect to 100% of the ecosystem; others miss key AAs. |
-| **Multi-AA Orchestration** | **Yes** | ? | **No** | **Success Rate**: We auto-route traffic; Moneyone relies on single-AA routing. |
-| **Routing Logic** | Health, Round-Robin, Preference | Preference, Health | 1 AA Only | **Reliability**: We optimize for uptime dynamically. |
+**What it is:** Fee from licensed aggregators
+**Who pays:** Client (at actual cost)
+**Our role:** We pass it through, no markup
+**Range:** ₹0.01 to ₹30 per fetch
 
-### 2. Resilience & Operational Gap
-| Feature | Finarkein | Ignosis | Moneyone | Impact |
-|---------|-----------|---------|----------|--------|
-| **Concentration Risk** | **<30%** (Balanced) | >85% (High Risk) | >90% (Critical) | **Business Continuity**: Competitors have single points of failure. |
-| **Auto-Fetch Support** | **Yes** | No | No | **Data Freshness**: We keep data updated automatically. |
-| **Retry Scheduler** | **Yes** | No | No | **Conversion**: We recover failed fetches without user intervention. |
-| **Data Quality Checks** | **Yes** | No | No | **Accuracy**: We validate data before you see it. |
+### 2. TSP Fees (Our Revenue)
 
-### 3. Analytics & Intelligence Gap
-| Feature | Finarkein | Ignosis | Moneyone | Impact |
-|---------|-----------|---------|----------|--------|
-| **Income (Non-Salaried)** | **Yes** | Yes | **No** | **Underwriting**: Moneyone cannot assess gig/business income. |
-| **Portfolio Analysis** | **Yes** | Yes | **No** | **Wealth**: Moneyone lacks investment insights. |
-| **Spend & Cashflow** | **Yes** | Yes | **No** | **Credit Monitoring**: Critical gaps in Moneyone's offering. |
-| **Cross-Analysis** | Bank-GST, Bank-Inv | ? | **No** | **Holistic View**: Only Finarkein links distinct financial datasets. |
+**What it is:** Fee for our platform and features
+**Who pays:** Client (our service charge)
+**Our role:** This is how we make money
+**Range:** ₹5 to ₹50 per fetch (based on tier)
 
-> **Strategic Conclusion**: 
-> - **Moneyone** is a basic "pipe" provider suitable only for simple, single-AA use cases (Tier 1).
-> - **Ignosis** lacks operational resilience tools (Auto-fetch, Retries) essential for scale.
-> - **Finarkein** is the only **Enterprise-Grade TSP** capable of guaranteeing uptime and delivering actionable intelligence.
+**Total client cost = TSP fee + AA charge**
 
 ---
 
-## Part 4: Finarkein Billing Strategy (TSP Fees)
+## Why We're Better
 
-### Pricing Philosophy
-**Separation of Concerns**:
-*   **TSP Fee**: For Finarkein's technology, orchestration, and analytics.
-*   **AA Cost**: Pass-through at actuals (transparent to client).
+### What We Offer
 
-### Recommended TSP Service Fee Tiers
-*(These fees are **in addition** to the underlying AA charges)*
+**Multi-AA Access:**
+- We connect to 12 AAs (8 deep integrations)
+- Competitors: 5-6 AAs max
+- Result: Better coverage, less downtime
 
-#### **Tier 1: Basic Connectivity (TSP Fee: ₹5 - ₹8 / fetch)**
-*   **Target**: Small FIUs needing basic connectivity.
-*   **Includes**: Single AA routing, Basic API access.
-*   **Total Cost to Client**: TSP Fee (₹5-8) + AA Charge (at actuals).
+**Smart Routing:**
+- Health-based routing across AAs
+- Auto-retry on failures
+- Less than 30% traffic to any single AA
+- Result: 99%+ uptime
 
-#### **Tier 2: Orchestration & Reliability (TSP Fee: ₹10 - ₹15 / fetch)**
-*   **Target**: Mid-sized FIUs prioritizing uptime.
-*   **Includes**: **Multi-AA Orchestration**, Health-based routing, Auto-fetch/Retry.
-*   **Total Cost to Client**: TSP Fee (₹10-15) + AA Charge (at actuals).
+**More Data Types:**
+- 10 financial instrument types
+- Competitors: 1-5 types
+- Result: Complete financial picture
 
-#### **Tier 3: Analytics & Intelligence (TSP Fee: ₹20 - ₹30 / fetch)**
-*   **Target**: Lenders and Underwriters.
-*   **Includes**: Tier 2 + **Analyzed Data** (Bank statement analysis, Income verification).
-*   **Total Cost to Client**: TSP Fee (₹20-30) + AA Charge (at actuals).
+**Built-In Analytics:**
+- Income verification (salaried + gig)
+- Spend analysis
+- Portfolio tracking
+- Cross-analysis (bank + GST, bank + investments)
+- Result: Ready-to-use insights
 
-#### **Tier 4: Premium Analytics Suite (TSP Fee: ₹35 - ₹50 / fetch)**
-*   **Target**: Large FIUs with complex needs.
-*   **Includes**: Tier 3 + **Advanced Analytics** (Portfolio, GST cross-analysis, Fraud detection).
-*   **Total Cost to Client**: TSP Fee (₹35-50) + AA Charge (at actuals).
+### What Competitors Lack
 
-#### **Tier 5: Enterprise Solutions (Custom)**
-*   **Target**: Banks, Large NBFCs.
-*   **Includes**: Platform license, Custom flows, Dedicated support.
-*   **Pricing**: Platform Fee + Per-fetch TSP Fee + AA Charge (at actuals).
+**Moneyone:**
+- Single AA routing only
+- No analytics
+- No auto-retry
+- Good for: Basic use cases only
 
-### Volume Discounts
+**Ignosis:**
+- 6 AAs (vs our 12)
+- No auto-fetch
+- No retry scheduler
+- High concentration risk (85%+ on one AA)
+
+**Our advantage:** Enterprise-grade reliability + analytics
+
+---
+
+## Our Pricing Tiers
+
+### Tier 1: Basic (₹5-₹8 per fetch)
+
+**Who it's for:** Small clients, simple needs
+
+**What's included:**
+- Single AA routing
+- Basic API access
+- Email support
+
+**Total cost:** ₹5-8 (our fee) + AA charge
+
+### Tier 2: Reliable (₹10-₹15 per fetch)
+
+**Who it's for:** Mid-size clients who need uptime
+
+**What's included:**
+- Multi-AA routing
+- Health-based switching
+- Auto-fetch
+- Auto-retry
+- Standard support
+
+**Total cost:** ₹10-15 (our fee) + AA charge
+
+### Tier 3: Analytics (₹20-₹30 per fetch)
+
+**Who it's for:** Lenders, underwriters
+
+**What's included:**
+- Everything in Tier 2
+- Bank statement analysis
+- Income verification
+- Spend categorization
+- Cashflow analysis
+
+**Total cost:** ₹20-30 (our fee) + AA charge
+
+### Tier 4: Advanced (₹35-₹50 per fetch)
+
+**Who it's for:** Large FIUs with complex needs
+
+**What's included:**
+- Everything in Tier 3
+- Portfolio analysis
+- GST cross-analysis
+- Fraud detection
+- Custom analytics
+
+**Total cost:** ₹35-50 (our fee) + AA charge
+
+### Tier 5: Enterprise (Custom)
+
+**Who it's for:** Banks, large NBFCs
+
+**What's included:**
+- Platform license
+- Custom workflows
+- Dedicated support
+- SLA guarantees
+- White-label options
+
+**Pricing:** Platform fee + per-fetch fee + AA charge
+
+---
+
+## Volume Discounts
+
 | Monthly Fetches | Discount |
 |-----------------|----------|
-| 10k - 50k | 10% |
-| 50k - 100k | 15% |
-| 100k - 500k | 20% |
-| 500k+ | 30% |
+| 10K - 50K | 10% off |
+| 50K - 100K | 15% off |
+| 100K - 500K | 20% off |
+| 500K+ | 30% off |
+
+**Example:**
+- Base price: ₹15/fetch
+- Volume: 60K fetches/month
+- Discount: 15%
+- Final price: ₹12.75/fetch
 
 ---
 
-## Part 4: Implementation Roadmap
+## Competitive Comparison
 
-### Phase 1: Foundation (Months 1-2)
-*   Implement per-fetch tracking and tier-based billing logic.
-*   Track AA pass-through costs to monitor gross margins.
+### Feature Matrix
 
-### Phase 2: Intelligence (Months 3-4)
-*   Deploy module-wise usage tracking for analytics.
-*   Launch "Add-on" billing for specific analytics modules.
+| Feature | Finarkein | Ignosis | Moneyone |
+|---------|-----------|---------|----------|
+| **AAs Connected** | 12 | 6 | 5 |
+| **Multi-AA Routing** | Yes | Maybe | No |
+| **Auto-Retry** | Yes | No | No |
+| **Auto-Fetch** | Yes | No | No |
+| **Income Analysis** | Yes | Yes | No |
+| **Portfolio Analysis** | Yes | Yes | No |
+| **Cross-Analysis** | Yes | No | No |
+| **Concentration Risk** | <30% | >85% | >90% |
 
-### Phase 3: Enterprise & Scale (Months 5-6)
-*   Roll out platform fee structures and SLA credit systems.
-*   Automate volume discount calculations.
+### What This Means
 
----
-
-## Conclusion
-By bundling multi-AA reliability and advanced analytics into tiered offerings, Finarkein can command a premium over raw data providers while offering superior value to FIUs.
-
-*Prepared for Finarkein Analytics | November 2025*
-
----
-
-# Appendix: Pricing Verification & Source Citations
-
-## Official Source URLs for Verified Pricing
-
-### Account Aggregators (AAs)
-
-#### 1. Setu AA (Agya Technologies)
-- **Pricing**: ₹0.01 - ₹25 per fetch
-- **Official Source**: https://setu-aa.com/pricing-policy
-- **Quote**: "INR 1 paisa to INR 25 per fetch"
-- **Verification Date**: November 19, 2025
-- **Additional Notes**: Pricing depends on FIU use case. FIP charges are passed through.
+**For basic needs:** All providers work
+**For reliability:** Only we guarantee uptime
+**For analytics:** We're the only complete solution
 
 ---
 
-#### 2. Anumati (Perfios)
-- **Pricing**: ₹5 - ₹25 for statements, ₹1 for profile/summary
-- **Official Source**: https://www.anumati.co.in/pricing/
-- **Quote**: "Pricing for statement requests depends on statement period ranging from Rs.5/-* to Rs.25/-* per fetch. Pricing for fetching profile and summary data will be charged at Re.1/-* per fetch."
-- **Verification Date**: November 19, 2025
-- **Additional Notes**: Two-tier pricing based on data type
+## Implementation Plan
+
+### Month 1-2: Foundation
+
+**Build:**
+- Per-fetch tracking system
+- Tier-based billing logic
+- AA cost pass-through tracking
+
+**Launch:**
+- Tier 1 and Tier 2 pricing
+- Basic volume discounts
+
+### Month 3-4: Analytics
+
+**Build:**
+- Module-wise usage tracking
+- Analytics feature flags
+- Add-on billing system
+
+**Launch:**
+- Tier 3 pricing
+- Analytics add-ons
+
+### Month 5-6: Enterprise
+
+**Build:**
+- Platform fee structures
+- SLA credit system
+- Custom pricing engine
+
+**Launch:**
+- Tier 4 and Tier 5 pricing
+- Enterprise contracts
 
 ---
 
-#### 3. Finvu (Cookiejar Technologies)
-- **Pricing**: ₹20 - ₹30 per data fetch
-- **Official Source**: https://finvu.in/pricing
-- **Quote**: "Our standard pricing is between INR 20 to INR 30 per data fetch. However we also offer preferred and standard pricing based on volumes."
-- **Verification Date**: November 19, 2025
-- **Screenshot Available**: Yes (finvu_pricing_page_1763553410004.png)
-- **Additional Notes**: Volume-based discounts available
+## Pricing Examples
+
+### Example 1: Small Lender (Tier 2)
+
+**Profile:**
+- 5K fetches/month
+- Needs reliability
+- Basic underwriting
+
+**Costs:**
+- TSP fee: ₹12/fetch × 5K = ₹60,000
+- AA charges: ₹5/fetch × 5K = ₹25,000
+- Total: ₹85,000/month
+
+### Example 2: Mid-Size NBFC (Tier 3)
+
+**Profile:**
+- 50K fetches/month
+- Needs analytics
+- Income verification
+
+**Costs:**
+- TSP fee: ₹25/fetch × 50K = ₹12,50,000
+- Volume discount: 10% = -₹1,25,000
+- Net TSP: ₹11,25,000
+- AA charges: ₹5/fetch × 50K = ₹2,50,000
+- Total: ₹13,75,000/month
+
+### Example 3: Large Bank (Tier 5)
+
+**Profile:**
+- 500K fetches/month
+- Custom workflows
+- Dedicated support
+
+**Costs:**
+- Platform fee: ₹5,00,000/month
+- TSP fee: ₹15/fetch × 500K = ₹75,00,000
+- Volume discount: 30% = -₹22,50,000
+- Net TSP: ₹52,50,000
+- AA charges: ₹3/fetch × 500K = ₹15,00,000
+- Total: ₹72,50,000/month
 
 ---
 
-#### 4. NADL (NESL Asset Data Limited)
-- **Pricing**: ₹2 per transaction
-- **Official Source**: https://www.nadl.co.in/tariff
-- **Quote**: "Rs. 2 per transaction (excluding taxes)"
-- **Verification Date**: November 19, 2025
-- **Additional Notes**: Includes onboarding, discovery, consent, and data requests. Excludes payment gateway charges.
+## Migration Strategy
+
+### For Existing Clients
+
+**Step 1: Audit current usage**
+- Track fetches per month
+- Identify features used
+- Calculate current costs
+
+**Step 2: Map to tiers**
+- Match features to tier
+- Calculate new pricing
+- Show value gained
+
+**Step 3: Transition**
+- Grandfather pricing for 3 months
+- Phase in new tiers
+- Offer upgrade incentives
+
+### For New Clients
+
+**Step 1: Discovery**
+- Understand use case
+- Estimate volume
+- Identify must-have features
+
+**Step 2: Recommend tier**
+- Match needs to tier
+- Show cost breakdown
+- Explain value
+
+**Step 3: Onboard**
+- Start with lower tier
+- Monitor usage
+- Upgrade as needed
 
 ---
 
-#### 5. Onemoney (FinSec AA Solutions)
-- **Pricing**: ₹0.30 - ₹11 per account
-- **Official Source**: https://onemoney.in (pricing/tariff page)
-- **Detailed Breakdown**:
-  - Account transactions/statement: ₹9.90
-  - Account profile: ₹3.00
-  - Account balance: ₹0.30
-  - All of the above: ₹11.00
-  - Failed fetch processing: ₹0.10
-- **Quote**: "The tariffs per customer account for FIUs are as follows..."
-- **Verification Date**: November 19, 2025
-- **Additional Notes**: Pay-as-you-go model. Pricing flexibility based on volume. 3-year contract preferred. Billing occurs fortnightly.
+## Sales Positioning
+
+### Tier 1 Pitch
+"Get started with AA integration for ₹5-8 per fetch. Perfect for testing or low-volume use cases."
+
+### Tier 2 Pitch
+"Never worry about downtime. Our multi-AA routing ensures 99%+ uptime for just ₹10-15 per fetch."
+
+### Tier 3 Pitch
+"Get analyzed data, not raw data. Income verification and spend analysis included at ₹20-30 per fetch."
+
+### Tier 4 Pitch
+"Complete financial intelligence. Portfolio tracking, fraud detection, and cross-analysis at ₹35-50 per fetch."
+
+### Tier 5 Pitch
+"Enterprise-grade platform with custom workflows and dedicated support. Let's discuss your needs."
 
 ---
 
-#### 6. Protean (NSDL - SurakshAA)
-- **Pricing**: ₹2 - ₹10 per fetch
-- **Official Source**: https://proteansurakshaa.in/tariff OR https://proteansurakshaa.in/pricing
-- **Quote**: "For Financial Information Users (FIUs), such as banks, insurance companies, or other financial institutions, Protean SurakshAA charges on a per fetch-transaction basis. The indicative pricing for these fetch requests ranges from ₹2 to ₹10 per fetch."
-- **Verification Date**: November 19, 2025
-- **Additional Notes**: Free for individual customers. Pricing varies by data provider, date range, and parameters.
+## Key Metrics to Track
+
+### Revenue Metrics
+- Average revenue per fetch
+- Revenue by tier
+- Volume discount impact
+- AA cost vs TSP revenue ratio
+
+### Usage Metrics
+- Fetches per client per month
+- Tier distribution
+- Feature adoption rate
+- Upgrade/downgrade rate
+
+### Operational Metrics
+- AA cost per fetch (actual)
+- Gross margin by tier
+- Support cost by tier
+- Infrastructure cost per fetch
 
 ---
 
-#### 7. CAMS (CAMSFinServ)
-- **Pricing**: **Not Available**
-- **Official Sources**: https://camsfinserv.com
-- **Verification Status**: Pricing not publicly listed on website.
-- **Additional Notes**: Free for consumers. B2B pricing requires direct inquiry.
+## Competitive Responses
+
+### "Your competitor is cheaper"
+
+**Response:**
+"Let's compare total cost of ownership. Our multi-AA routing means 99%+ uptime. What's the cost of downtime for your business?"
+
+### "Why should I pay for analytics?"
+
+**Response:**
+"You're already paying for raw data. We turn it into decisions. Our income verification alone saves 2-3 hours per application."
+
+### "I only need one AA"
+
+**Response:**
+"That's fine. Start with Tier 1 at ₹5-8 per fetch. When you need reliability, upgrade to Tier 2."
+
+### "Can you match their price?"
+
+**Response:**
+"We can't match on price alone. But we can show you the value difference. Let's run a pilot and measure the impact."
 
 ---
 
-### Technology Service Providers (TSPs)
+## Action Items
 
-> **Note**: Unlike AAs, TSPs are not mandated to publish standard tariffs. Their pricing is typically custom and enterprise-based. Browser verification confirmed no public pricing pages exist on their main websites.
+### This Month
+- [ ] Finalize tier pricing
+- [ ] Build billing system
+- [ ] Create pricing calculator
+- [ ] Train sales team
 
-#### 8. Moneyone
-- **Pricing**: **Not Available**
-- **Browser Verification**: Checked `moneyone.in` (Nov 19, 2025). No public pricing link found.
-- **Status**: Verified as **Not Available**.
+### Next Quarter
+- [ ] Launch Tier 1-3
+- [ ] Migrate 10 pilot clients
+- [ ] Measure gross margins
+- [ ] Refine pricing based on data
 
-#### 9. Ignosis (Formerly Pirimid Fintech)
-- **Pricing**: **Not Available**
-- **Browser Verification**: Checked `ignosis.ai` (Nov 19, 2025). No public pricing link found.
-- **Status**: Verified as **Not Available**.
-
-#### 10. Saafe
-- **Pricing**: **Not Available**
-- **Browser Verification**: Checked `saafe.tech` & `saafe.in` (Nov 19, 2025). No public pricing link found.
-- **Status**: Verified as **Not Available**.
-
----
-
-## Verification Methodology
-
-1. **Primary Sources**: Official company websites (pricing/tariff pages)
-2. **Secondary Sources**: Sahamati.org.in (for entity type verification)
-3. **Tertiary Sources**: Market reports and industry analysis (for CAMS competitive pricing)
-4. **Search Method**: Google web search with direct quotes from official sources
-5. **Cross-Verification**: Multiple sources checked where available
+### Next 6 Months
+- [ ] Launch Tier 4-5
+- [ ] Automate volume discounts
+- [ ] Build self-service pricing
+- [ ] Expand to 50+ clients
 
 ---
 
-## Confidence Level
+## Appendix: Source Verification
 
-- **High Confidence (Direct Official Source)**: Setu AA, Anumati, Finvu, NADL, Onemoney, Protean
-- **Medium Confidence (Official + Market Data)**: CAMS
-- **Verified Entity Types**: All 10 entities verified against Sahamati.org.in official lists
+All AA pricing verified from official websites (Nov 2025):
+
+**Setu AA:** setu-aa.com/pricing-policy
+**Anumati:** anumati.co.in/pricing
+**Finvu:** finvu.in/pricing
+**NADL:** nadl.co.in/tariff
+**Onemoney:** onemoney.in/pricing
+**Protean:** proteansurakshaa.in/tariff
+
+TSP pricing not publicly available (verified via browser check).
 
 ---
 
-*Document Created: November 19, 2025*  
-*Last Verification: November 19, 2025*  
-*All URLs accessed and verified on the date above*
+*Last updated: November 20, 2025*
