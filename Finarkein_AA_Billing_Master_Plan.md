@@ -8,27 +8,29 @@ This master document consolidates the competitive pricing analysis of the Accoun
 
 ## Part 1: Competitive Pricing Analysis
 
-### Overview of AA Pricing Models
+### Overview of AA & TSP Pricing Models
 
-We analyzed the pricing structures of major Account Aggregators to establish a baseline for Finarkein's cost structure and competitive positioning.
+We analyzed the pricing structures of Account Aggregators (AAs) and Technology Service Providers (TSPs) to establish a baseline for Finarkein's cost structure and competitive positioning.
 
-| AA Provider | Pricing Model | Price Range (per fetch) | Key Notes |
-|-------------|---------------|-------------------------|-----------|
-| **Setu AA** | Use-case based | ₹0.01 - ₹25 | Pricing depends on FIU use case. No charge for customers. |
-| **Anumati** | Data-type based | ₹1 - ₹25 | ₹5-25 for statements (varies by period), ₹1 for profile/summary. |
-| **Finvu** | Volume-based | ₹20 - ₹30 | Standard range. Volume discounts available. |
-| **NADL** | Transaction-based | ₹2 | **Rs. 2 per transaction**. Includes onboarding, discovery, consent, and data requests. Excludes taxes & gateway charges. |
-| **Moneyone** | Hybrid (Per-account + Rev Share) | ₹0.30 - ₹60 | **₹0.30-₹60 per account** (varies by data type). **10-30 bps revenue share** for decision insights. Free consent/multi-AA. |
-| **Onemoney** | Hybrid (Per-account + Rev Share) | ₹1 - ₹60 | **₹1-₹60 per account**. **10-30 bps revenue share** for insights. Free consent management. |
-| **Ignosis** | Pay-as-you-go | Custom | "No upfront cost" model. Enterprise-focused custom pricing. |
-| **Protean** | Per-fetch | Undisclosed | Charges on per-fetch transaction basis. Free for consumers. |
-| **CAMS** | Undisclosed | - | Free for consumers. B2B pricing not publicly disclosed. |
-| **Saafe** | Modular | Custom | Modular platform pricing. Likely custom enterprise contracts. |
+| Provider | Entity Type | Pricing Model | Price Range (per fetch) | Key Notes |
+|----------|-------------|---------------|-------------------------|-----------|
+| **Setu AA** | **AA** (Agya Technologies) | Use-case based | ₹0.01 - ₹25 | RBI-licensed NBFC-AA. Pricing depends on FIU use case. |
+| **Anumati** | **AA** (Perfios) | Data-type based | ₹1 - ₹25 | RBI-licensed NBFC-AA. ₹5-25 for statements, ₹1 for profile/summary. |
+| **Finvu** | **AA** (Cookiejar Tech) | Volume-based | ₹20 - ₹30 | RBI-licensed NBFC-AA. Volume discounts available. |
+| **NADL** | **AA** (NESL) | Transaction-based | ₹2 | RBI-licensed NBFC-AA. ₹2/transaction includes onboarding, discovery, consent. |
+| **Moneyone** | **TSP** (Tech Platform) | Hybrid (Per-account + Rev Share) | ₹0.30 - ₹60 | Technology Service Provider. ₹0.30-₹60/account + 10-30 bps revenue share for insights. |
+| **Onemoney** | **AA** (FinSec AA) | Hybrid (Per-account + Rev Share) | ₹1 - ₹60 | RBI-licensed NBFC-AA. ₹1-₹60/account + 10-30 bps revenue share. |
+| **Protean** | **AA** (NSDL) | Per-fetch | Undisclosed | RBI-licensed NBFC-AA. Per-fetch transaction basis. Free for consumers. |
+| **CAMS** | **AA** (CAMSFinServ) | Undisclosed | - | RBI-licensed NBFC-AA. Free for consumers. B2B pricing not disclosed. |
+| **Ignosis** | **TSP** (FIP/FIU Module) | Pay-as-you-go | Custom | Technology Service Provider. Multi-AA routing, enterprise custom pricing. |
+| **Saafe** | **TSP** (FIP/FIU Module) | Modular | Custom | Technology Service Provider. Multi-AA gateway, modular platform. |
 
 ### Key Insights
-1.  **Wide Variance**: Base costs range significantly (from ₹0.01 to ₹30), heavily influenced by volume and use case.
-2.  **Pass-Through Costs**: Most AAs pass through FIP charges (if any) to the FIU.
-3.  **Volume Matters**: Significant discounts are standard for high-volume commitments.
+1.  **Entity Types**: **7 Account Aggregators** (RBI-licensed NBFC-AA) vs **3 TSPs** (Technology platforms) in our analysis.
+2.  **Wide Variance**: AA costs range from ₹0.01 to ₹60, heavily influenced by volume, use case, and data type.
+3.  **Pass-Through Model**: Most AAs pass through FIP charges (if any) to the FIU.
+4.  **Volume Discounts**: Standard for high-volume commitments across all AAs.
+5.  **TSP Positioning**: TSPs like Ignosis and Saafe offer multi-AA orchestration (similar to Finarkein) with custom enterprise pricing.
 
 ---
 
