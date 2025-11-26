@@ -174,19 +174,6 @@ Navigate to **Product Catalog → Plans** and create plans for each customer:
      - 5,001 - 20,000 fetches: ₹6.30 per fetch
      - 20,001+ fetches: ₹5.60 per fetch
 
-### Plan 4: Spark Capital - Flat Per User
-
-**Plan Name**: Spark Capital Plan
-
-**Usage-Based Charges**:
-
-1. **Active Users**
-   - Feature: Active AA Users
-   - Billing Model: Volume-Based Pricing
-   - **Volume Tiers**:
-     - 0 - 1,000 users: ₹8.00 per user
-     - 1,001 - 5,000 users: ₹7.20 per user
-     - 5,001+ users: ₹6.40 per user
 
 ### Plan 5: Fibe - Hybrid Model
 
