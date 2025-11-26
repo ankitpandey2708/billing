@@ -14,26 +14,6 @@ Navigate to **Customers** in the FlexPrice dashboard and create the following cu
    - Name: Cusp Money
    - Email: billing@cuspmoney.com
 
-3. **Dvara**
-   - Customer ID: `dvara`
-   - Name: Dvara
-   - Email: billing@dvara.com
-
-4. **Spark Capital**
-   - Customer ID: `spark_capital`
-   - Name: Spark Capital
-   - Email: billing@sparkcapital.com
-
-5. **Fibe**
-   - Customer ID: `fibe`
-   - Name: Fibe
-   - Email: billing@fibe.com
-
-6. **PNB MetLife**
-   - Customer ID: `pnb_metlife`
-   - Name: PNB MetLife
-   - Email: billing@pnbmetlife.com
-
 ---
 
 ## Step 2: Create Metered Features
@@ -147,21 +127,6 @@ Navigate to **Product Catalog → Plans** and create plans for each customer:
      - 10,001 - 50,000 fetches: ₹0.45 per fetch
      - 50,001+ fetches: ₹0.40 per fetch
 
-2. **Template Standard Fetches**
-   - Feature: Data Fetch - Template Standard
-   - Billing Model: Volume-Based Pricing
-   - **Volume Tiers**:
-     - 0 - 10,000 fetches: ₹2.00 per fetch
-     - 10,001 - 50,000 fetches: ₹1.80 per fetch
-     - 50,001+ fetches: ₹1.60 per fetch
-
-3. **Template Premium Fetches**
-   - Feature: Data Fetch - Template Premium
-   - Billing Model: Volume-Based Pricing
-   - **Volume Tiers**:
-     - 0 - 5,000 fetches: ₹10.00 per fetch
-     - 5,001 - 20,000 fetches: ₹9.00 per fetch
-     - 20,001+ fetches: ₹8.00 per fetch
 
 ### Plan 2: Cusp Money - Tiered by AA Count
 
