@@ -1,0 +1,42 @@
+{
+  "name": "finarkein-billing-metering",
+  "version": "1.0.0",
+  "description": "Standalone metering service for Finarkein billing with FlexPrice integration",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "mock-api": "node src/mock-api/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "billing",
+    "metering",
+    "flexprice",
+    "account-aggregator"
+  ],
+  "author": "Finarkein",
+  "license": "MIT",
+  "dependencies": {
+    "@flexprice/sdk": "^1.0.0",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0",
+    "joi": "^17.11.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
