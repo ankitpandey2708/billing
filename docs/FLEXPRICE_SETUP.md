@@ -9,10 +9,6 @@ Navigate to **Customers** in the FlexPrice dashboard and create the following cu
    - Name: Cashfloat
    - Email: billing@cashfloat.com
 
-2. **Cusp Money**
-   - Customer ID: `cusp_money`
-   - Name: Cusp Money
-   - Email: billing@cuspmoney.com
 
 ---
 
@@ -93,16 +89,6 @@ Create separate features for each purpose code tier:
 - **Aggregation Field**: `user_id`
 - **Usage Reset**: Periodic (Monthly)
 - **Unit Name**: user / users
-
-### Feature 6: Customization Hours
-
-- **Name**: Customization Hours
-- **Type**: Metered
-- **Event Name**: `customization.hours`
-- **Aggregation Function**: Sum
-- **Aggregation Field**: `hours`
-- **Usage Reset**: Periodic (Monthly)
-- **Unit Name**: hour / hours
 
 ---
 
@@ -302,33 +288,6 @@ curl -X POST https://api.flexprice.io/v1/events \
 
 ---
 
-## Step 7: Monitor and Verify
-
-1. **Check Dashboard**: Go to https://admin.flexprice.io/
-2. **View Events**: Navigate to Events to see incoming events
-3. **Check Usage**: View customer usage under each subscription
-4. **Verify Billing**: Check that volume-based discounts are applied correctly
-
----
-
-## Volume-Based Discount Summary
-
-All plans now include volume-based discounts:
-
-| Customer | Base Rate | Tier 2 (10K+) | Tier 3 (50K+) |
-|----------|-----------|---------------|---------------|
-| Cashfloat (Basic) | ₹0.50 | ₹0.45 (10% off) | ₹0.40 (20% off) |
-| Cashfloat (Standard) | ₹2.00 | ₹1.80 (10% off) | ₹1.60 (20% off) |
-| Cashfloat (Premium) | ₹10.00 | ₹9.00 (10% off) | ₹8.00 (20% off) |
-| Cusp Money | ₹2.50 | ₹2.25 (10% off) | ₹2.00 (20% off) |
-| Dvara (101) | ₹1.50 | ₹1.35 (10% off) | ₹1.20 (20% off) |
-| Dvara (102) | ₹3.50 | ₹3.15 (10% off) | ₹2.80 (20% off) |
-| Dvara (103) | ₹7.00 | ₹6.30 (10% off) | ₹5.60 (20% off) |
-| Spark Capital | ₹8.00 | ₹7.20 (10% off) | ₹6.40 (20% off) |
-| Fibe | ₹0.10 | ₹0.09 (10% off) | ₹0.08 (20% off) |
-| PNB MetLife | ₹5.00 | ₹4.50 (10% off) | ₹4.00 (20% off) |
-
----
 
 ## Next Steps
 
