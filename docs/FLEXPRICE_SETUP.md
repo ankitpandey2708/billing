@@ -16,9 +16,9 @@ Navigate to **Customers** in the FlexPrice dashboard and create the following cu
 
 Navigate to **Product Catalog → Features** and create the following metered features:
 
-### Feature 1: Data Fetch (Basic)
+### Feature 1: Data Fetch
 
-- **Name**: Data Fetch - Basic
+- **Name**: Data Fetch
 - **Type**: Metered
 - **Event Name**: `data.fetch`
 - **Aggregation Function**: Count
@@ -31,23 +31,23 @@ This is the base feature for counting data fetches.
 
 Create separate features for each CT template tier:
 
-**Feature 2a: Data Fetch - Template Basic**
-- **Name**: Data Fetch - Template Basic
+**Feature 2a: Data Fetch - CT001**
+- **Name**: Data Fetch - CT001
 - **Type**: Metered
 - **Event Name**: `data.fetch`
 - **Aggregation Function**: Count
 - **Event Filters**: 
   - Property: `ct_template`
   - Operator: `equals`
-  - Value: `template_basic`
+  - Value: `CT001`
 - **Usage Reset**: Periodic (Monthly)
 - **Unit Name**: fetch / fetches
 
-**Feature 2b: Data Fetch - Template Standard**
-- Same as above, but filter for `ct_template = template_standard`
+**Feature 2b: Data Fetch - CT002**
+- Same as above, but filter for `ct_template = CT002`
 
-**Feature 2c: Data Fetch - Template Premium**
-- Same as above, but filter for `ct_template = template_premium`
+**Feature 2c: Data Fetch - CT003**
+- Same as above, but filter for `ct_template = CT003`
 
 ### Feature 3: Data Fetch by Purpose Code (Dvara)
 
