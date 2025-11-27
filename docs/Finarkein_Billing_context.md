@@ -12,7 +12,7 @@
 | PNB MetLife | - | TBD | Per user/mo | ₹5 + ₹499 | NERV solution |
 
 
-### Current Fee Structure
+### Current Pricing Models
 
 **One-Time Fees:**
 - Setup: Free (most) or ₹6L (Fibe only)
@@ -20,29 +20,7 @@
 
 **Recurring Fees:**
 - Data Fetch : Per Fetch aka Transaction(This can be futher broken down on basis of type of FI Types X Consent Types X Purpose Code X CT Template ) || Per User Per Month (both these options can be expanded across 1 AA or more than 1 AA . eg : Data Fetch Fee for single AA and Data Fetch Fee for 2 AA's)
-- Console: ₹499/user/month
+- Console: ₹499/ MAU
 
-**Variable Fees:**
-- Customization: ₹1,200/hour
-
-### What's Missing Today
-
-**Payment Terms:**
-- Certification Fee is payable in full before go-live
-- Data Fetch fee is payable every month as per the usage. Fee is chargeable for all active AA IDs
-- Customization fee is chargeable for any changes required which is outside the scope of this SOW
-- FIP fees, if any, is not included in Data Fetch fee. As and when FIP starts charging fees, same shall be payable by client as-is.
-- AA fees for partner AAs are included. Change in AA partners may change Data Fetch fees.
-- Console Portal user fee is payable every month and billed for number of active portal users
----
-
-## Appendix
-
-| Account Aggregators (Licensed) | Price | Pricing Page |
-|----------|-------------|-------|
-| Setu AA | ₹0.01 - ₹25 | https://setu-aa.com/pricing-policy |
-| Anumati | ₹1 - ₹25 | https://www.anumati.co.in/pricing/ |
-| Finvu | ₹20 - ₹30 | https://finvu.in/pricing |
-| NADL | ₹2 | https://www.nadl.co.in/tariff |
-| Onemoney | ₹0.30 - ₹11 | https://www.onemoney.in/docs/resources/FinTech%20Group%20Very%20Brief%20Business%20Summary.pdf |
-| Protean | ₹2 - ₹10 | https://proteansurakshaa.in/pricing |
+**Adhoc Fees:**
+- Solution Customization: ₹1,200/ man hours (THis is difficult to meter as this is subjective. )
