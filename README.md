@@ -37,16 +37,7 @@ This system provides:
 ### Additional Services
 
 - **Certification Fee**: ₹30,000 (one-time)
-- **Setup Fee**: ₹0 (most) or ₹600,000 (Fibe)
-- **Customization**: ₹1,200 per hour
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js >= 18.0.0
-- npm >= 9.0.0
-- FlexPrice account (https://admin.flexprice.io/)
 
 ### Installation
 
@@ -62,7 +53,7 @@ mkdir logs
 
 1. Update `.env` file with your FlexPrice API key (already configured):
 ```env
-FLEXPRICE_API_KEY=sk_01KAZNF267HCD1MABRASMQS2WG
+FLEXPRICE_API_KEY=sk_
 FLEXPRICE_ENVIRONMENT=production
 ```
 
@@ -141,18 +132,6 @@ Simulate console user login.
 }
 ```
 
-#### POST /api/v1/customization/log
-Log customization work hours.
-
-**Request:**
-```json
-{
-  "customerId": "fibe",
-  "hours": 8.5,
-  "taskDescription": "Custom PFM integration"
-}
-```
-
 ### Metering Service (Port 3001)
 
 #### POST /metering/data-fetch
@@ -170,12 +149,6 @@ Track a data fetch event to FlexPrice.
   "requestId": "req_abc123"
 }
 ```
-
-#### POST /metering/console-user
-Track console user activity.
-
-#### POST /metering/customization
-Track customization hours.
 
 #### POST /metering/flush
 Manually flush queued events to FlexPrice.
@@ -254,85 +227,6 @@ Create one-time charge (certification/setup fees).
   }
 }
 ```
-
-### Console User Event
-```json
-{
-  "event_name": "console.user.active",
-  "external_customer_id": "pnb_metlife",
-  "event_id": "unique_event_id",
-  "timestamp": "2025-11-26T14:00:00Z",
-  "properties": {
-    "user_id": "user_john",
-    "user_email": "john@pnbmetlife.com",
-    "activity_type": "login",
-    "quantity": 1
-  }
-}
-```
-
-### Customization Event
-```json
-{
-  "event_name": "customization.hours",
-  "external_customer_id": "fibe",
-  "event_id": "unique_event_id",
-  "timestamp": "2025-11-26T14:00:00Z",
-  "properties": {
-    "developer_id": "dev_ankit",
-    "task_description": "Custom work",
-    "hours": 8.5,
-    "hourly_rate": 1200
-  }
-}
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-
-```env
-# FlexPrice Configuration (Official API)
-FLEXPRICE_API_KEY=sk_01KAZNF267HCD1MABRASMQS2WG
-FLEXPRICE_BASE_URL=https://api.cloud.flexprice.io/v1
-FLEXPRICE_ENVIRONMENT=production
-
-# Metering Service
-METERING_PORT=3001
-METERING_BATCH_SIZE=100
-METERING_FLUSH_INTERVAL=5000
-
-# Mock API
-MOCK_API_PORT=3000
-MOCK_API_ENABLED=true
-
-# Logging
-LOG_LEVEL=info
-LOG_FILE=logs/metering.log
-```
-
-### FlexPrice Setup
-
-Follow the detailed guide in `docs/FLEXPRICE_SETUP.md` to:
-1. Create customers
-2. Configure metered features
-3. Set up pricing plans with volume discounts
-4. Create subscriptions
-5. Test event ingestion
-
-## 📈 Volume-Based Discounts
-
-All pricing plans include automatic volume-based discounts:
-
-- **Tier 1**: Base rate (0 - threshold)
-- **Tier 2**: 10% discount (threshold - 5x threshold)
-- **Tier 3**: 20% discount (5x threshold+)
-
-Example for Cashfloat (Basic Template):
-- 0 - 10,000 fetches: ₹0.50 each
-- 10,001 - 50,000 fetches: ₹0.45 each (10% off)
-- 50,001+ fetches: ₹0.40 each (20% off)
-
 ## 🧪 Testing
 
 ### Run Integration Demo
@@ -370,74 +264,3 @@ curl -X POST http://localhost:3001/metering/data-fetch \
     "ctTemplate":"template_basic"
   }'
 ```
-
-## 📁 Project Structure
-
-```
-billing/
-├── src/
-│   ├── index.js                    # Metering service main file
-│   ├── services/
-│   │   └── flexprice.service.js    # FlexPrice integration
-│   ├── mock-api/
-```
-
-## 🔐 Security
-
-- API key stored in `.env` (not committed to git)
-- HTTPS for all FlexPrice API calls
-- Request validation using Joi
-- Helmet.js for security headers
-- CORS enabled for cross-origin requests
-
-## 📊 Monitoring
-
-### Logs
-
-All events are logged to:
-- Console (colorized)
-- `logs/metering.log` (JSON format)
-
-### FlexPrice Dashboard
-
-Monitor usage and billing at:
-https://admin.flexprice.io/
-
-View:
-- Real-time event ingestion
-- Customer usage metrics
-- Invoice generation
-- Payment status
-
-## 🚀 Production Deployment
-
-### Integration Steps
-
-1. **Replace Mock API** with your actual AA backend
-2. **Add metering calls** after successful data fetches:
-   ```javascript
-   const FlexPriceService = require('./services/flexprice.service');
-   const flexPrice = new FlexPriceService();
-   
-   // After successful AA fetch
-   await flexPrice.trackDataFetch({
-     customerId: 'cashfloat',
-     aaProvider: 'setu',
-     fiType: 'deposit',
-     ctTemplate: 'template_basic',
-     aaId: 'AA_USER_123',
-     fetchStatus: 'success',
-     requestId: 'req_abc123'
-   });
-   ```
-
-3. **Deploy metering service** as standalone microservice
-4. **Configure monitoring** and alerting
-5. **Set up customer portal** (see `docs/customer-portal-requirements.md`)
-
-**Next Steps:**
-1. ✅ Complete FlexPrice dashboard configuration
-2. ✅ Run integration demo
-3. ⏭️ Integrate with production backend
-4. ⏭️ Build customer portal
-5. ⏭️ Monitor first billing cycle
