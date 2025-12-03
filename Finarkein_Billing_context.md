@@ -4,12 +4,12 @@
 
 | Client | Setup | Cert | Model | Rate | Special Terms |
 |--------|-------|------|-------|------|---------------|
-| Cashfloat | Free | ₹30K | Per fetch | ₹0.50-₹10 | CT Template based |
-| Cusp Money | Free | ₹30K | Per user/mo | ₹2.50-₹3.25 | Tiered by AAs |
-| Dvara | - | ₹30K | Per fetch | ₹1.50-₹7 | Purpose Code based |
-| Spark Capital | - | ₹35K | Per user/mo | ₹8 | TSP module |
-| Fibe | ₹6L | ₹30K | Hybrid | ₹0.10 + ₹2 min | PFM solution |
-| PNB MetLife | - | TBD | Per user/mo | ₹5 + ₹499 | NERV solution |
+| Cashfloat | Free | ₹30K | Per fetch | x | CT Template based |
+| Cusp Money | Free | ₹30K | Per user/mo | x | Tiered by AAs |
+| Dvara | - | ₹30K | Per fetch | x | Purpose Code based |
+| Spark Capital | - | ₹35K | Per user/mo | x | TSP module |
+| Fibe | ₹6L | ₹30K | Hybrid | x | PFM solution |
+| PNB MetLife | - | TBD | Per user/mo | x | NERV solution |
 
 
 ### Current Pricing Models
